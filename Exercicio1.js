@@ -1,14 +1,9 @@
-let result
 function fatorial(num){
-    if(result == undefined){
-        result = num
-    }
     if(num == 1){
-        console.log(result)
-        return
+        return num
     }
-    result *= num - 1
+    return num * fatorial(num-1)
     fatorial(num - 1)
 }
 
-fatorial(10)
+console.log(fatorial(10))
